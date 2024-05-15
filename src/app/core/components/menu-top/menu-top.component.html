@@ -1,0 +1,71 @@
+<nav class="bg-blue-600 shadow-md shadow-yellow-400" >
+    <!-- container -->
+    <div class="container px-4 flex flex-wrap py-2 justify-between mx-auto lg:space-x-4" >
+        <a href="#" class=" inline-flex p-2 text-white text-3xl font-bold uppercase -tracking-wider">Mairie d'Uvira</a>
+        <button class="lg:hidden inline-flex items-center justify-center text-white border h-10 w-10 ml-auto rounded-md outline-none focus:outline-none" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+        </button>
+        <!--menu-->
+        <div class="w-full lg:inline-flex lg:w-auto mt-2 lg:mt-0 py-2 space-x-4" >
+          <div class="group inline-block">
+            <button routerLink="/admin/dashboad" class="outline-none focus:outline-none  flex items-center min-w-32" >
+              <span class="flex px-4 text-lg font-medium text-gray-300 hover:hover:text-white rounded-md py-2">TABLEAU DE BORD</span>
+            </button>
+          </div>
+            <div class="group inline-block">
+                <button  class="outline-none focus:outline-none  flex items-center min-w-32" >
+                  <span class="flex px-4 text-lg font-medium text-gray-300 hover:hover:text-white rounded-md py-2">IHM</span>
+                </button>
+                <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+
+                  <li routerLink="/provinces" *ngIf="droits.province" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Provinces </li>
+                  <li routerLink="/villes" *ngIf="droits.ville" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Mairies</li>
+                  <li routerLink="/banques" *ngIf="droits.banque" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Banques</li>
+                  <li routerLink="/caisse" *ngIf="droits.caisse" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Caisse</li>
+                  <li routerLink="/caisse-recette" *ngIf="droits.caisse_recette" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Caisse recette</li>
+                  <li routerLink="/transfert" *ngIf="droits.transfert" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Transfert</li>
+                  <li routerLink="/postes" *ngIf="droits.poste" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Postes</li>
+                  <li routerLink="/pos" *ngIf="droits.pos" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">PoS</li>
+                  <li routerLink="/agent" *ngIf="droits.poste" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Agents</li>
+                  <li routerLink="/agent-pos" *ngIf="droits.poste" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Attribuer le PoS à l'agent</li>
+                  <!-- <li routerLink="/type_contribuable" *ngIf="droits.type_contribuable" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black">Types contribuables</li> -->
+                  <li routerLink="/contribuables" *ngIf="droits.contribuable" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Contribuables</li>
+                  <li routerLink="/montants" *ngIf="droits.montant" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Montants</li>
+                  <li routerLink="/taxes" *ngIf="droits.taxe" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Taxes</li>
+                  <li routerLink="/paiements/add" *ngIf="droits.paiement_taxe" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Paiement taxe</li>
+                  <li routerLink="/paiements/liste" *ngIf="droits.rapport_paiement_taxe"  routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Listes des paiement</li>
+                </ul>
+            </div>
+            <div class="group inline-block">
+                <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+                  <span class="flex px-4 text-lg font-medium text-gray-300 hover:hover:text-white rounded-md py-2 cursor-pointer">RAPPORTS</span>
+                </button>
+                <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+                  <li routerLink="/rapport/paiement-taxes"  routerLinkActive="active" class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Paiements des taxes</li>
+
+                </ul>
+            </div>
+
+            <div class="group inline-block">
+              <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+                <span class="flex px-4 text-lg font-medium text-gray-300 hover:hover:text-white rounded-md py-2">ADMINISTRATION</span>
+              </button>
+              <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+                <li routerLink="/admin/profil" *ngIf="droits.profil" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Profils et droits </li>
+                <li routerLink="/admin/password" routerLinkActive="active" *ngIf="droits.mot_de_passe" class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Modifier le mot de passe</li>
+                <li routerLink="/admin/user" *ngIf="droits.user" routerLinkActive="active"  class="px-3 py-2 bg-yellow-500 text-white  text-lg font-extralight hover:bg-gray-200 hover:text-black cursor-pointer">Utilisateurs</li>
+              </ul>
+          </div>
+        </div>
+        <div class="w-full lg:inline-flex lg:w-auto mt-2 lg:mt-0 py-2 space-x-4">
+          <button  (click)="confirmBox()" class="outline-none focus:outline-none  flex items-center min-w-32 space-x-2 "  >
+            <span class="flex  text-lg font-medium text-gray-300  rounded-md py-2">Déconnexion</span> <img src="{{base_url}}{{user.image}}" alt="" class="h-8 w-8 rounded-full"> <span class="text-white uppercase">{{user.description}}</span>
+          </button>
+        </div>
+    </div>
+</nav>
+
+
+

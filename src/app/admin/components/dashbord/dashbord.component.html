@@ -1,0 +1,14 @@
+<app-menu-top></app-menu-top>
+<div class="mb-6" >
+  <div *ngIf="droits.paiement_taxe" class="m-8 shadow-lg shadow-sky-600">
+    <div id="container"></div>
+  </div>
+  <div  class="my-12 mx-8 grid lg:grid-cols-2 gap-3">
+    <div *ngIf="droits.poste" class="shadow-lg shadow-sky-800">
+      <div  id="container_1"></div>
+    </div>
+    <div *ngIf="droits.poste" class="shadow-lg shadow-teal-800">
+      <div  id="container_2"></div>
+    </div>
+  </div>
+</div>

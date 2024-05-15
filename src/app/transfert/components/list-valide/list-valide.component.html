@@ -1,0 +1,67 @@
+<app-menu-top></app-menu-top>
+<div class="ml-auto mb-6">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+  <mat-card class=" mx-8 my-8">
+    <mat-card class="my-4">
+      <div class=" flex justify-between">
+        <mat-card-title>Liste des transferts validés </mat-card-title>
+        <a routerLink="/transfert/list" mat-raised-button class=" bg-blue-900 text-white">Liste des transferts encour</a>
+      </div>
+    </mat-card>
+    <mat-form-field appearance="standard" class="px-2">
+      <mat-label>Recherche</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex.John Yoshua  " #input>
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class = "mat-elevation-z8">
+      <ng-container matColumnDef="num">
+        <th mat-header-cell *matHeaderCellDef> N° Transf </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;"> {{element.num_transfert}}</td>
+      </ng-container>
+      <ng-container matColumnDef="agent">
+        <th mat-header-cell *matHeaderCellDef> Agent </th>
+        <td mat-cell *matCellDef="let element" style="width: 15%;">{{element.agent}}</td>
+      </ng-container>
+      <ng-container matColumnDef="pos">
+        <th mat-header-cell *matHeaderCellDef> PoS </th>
+        <td mat-cell *matCellDef="let element" style="width: 15%;"> {{element.pos}}</td>
+      </ng-container>
+      <ng-container matColumnDef="montant">
+        <th mat-header-cell *matHeaderCellDef> Montant </th>
+        <td mat-cell *matCellDef="let element" style="width: 15%;"> {{element.montant}}</td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="destination">
+        <th mat-header-cell *matHeaderCellDef> Destination </th>
+        <td mat-cell *matCellDef="let element" style="width: 15%;"> {{element.caisse }}</td>
+      </ng-container>
+      <ng-container matColumnDef="piece">
+        <th mat-header-cell *matHeaderCellDef> Pièce </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;">
+          <img src="{{base_url}}{{element.piece}}" alt="" class="h-20 w-20">
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[100,200,300,500]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </mat-card>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<app-menu-top></app-menu-top>
+<div class="ml-auto mb-6">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+  <mat-card class=" mx-8 my-8">
+    <mat-card class="my-4">
+      <div class=" flex justify-between">
+        <mat-card-title>Liste des caisses</mat-card-title>
+        <div class="flex space-x-4">
+          <a  routerLink="/caisse/create" mat-raised-button class=" bg-blue-900 text-white">Nouvelle</a>
+        </div>
+      </div>
+    </mat-card>
+    <mat-form-field appearance="standard" class="px-2">
+      <mat-label>Recherche</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex.John Yoshua  " #input>
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class = "mat-elevation-z8">
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef> Description de la caisse </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;"> {{element.description}} </td>
+      </ng-container>
+      <ng-container matColumnDef="solde">
+        <th mat-header-cell *matHeaderCellDef> Solde</th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;"> {{element.solde | number}}</td>
+      </ng-container>
+      <ng-container matColumnDef="versement">
+        <th mat-header-cell *matHeaderCellDef> Versement</th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;">
+          <button class="p-2 text-white bg-blue-900 rounded-md" (click)="GetDecaissement(element.id)">Décaissement</button>
+         </td>
+      </ng-container>
+      <ng-container matColumnDef="historique">
+        <th mat-header-cell *matHeaderCellDef> Historique</th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;">
+          <button class="p-2 text-white bg-blue-900 rounded-md" (click)="getHistorique(element.id)">Voir</button>
+         </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator #paginator [length]="totalRows" [pageIndex]="currentPage" [pageSize]="pageSize"
+      [pageSizeOptions]="pageSizeOptions" (page)="pageChanged($event)" aria-label="Select page">
+    </mat-paginator>
+  </mat-card>
+  </div>
+
+
+
+
+
+
+
+
+

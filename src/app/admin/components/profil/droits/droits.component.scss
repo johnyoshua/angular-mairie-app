@@ -1,0 +1,38 @@
+.example-form {
+  min-width: 80%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-width {
+  width: 50%;
+}
+
+.mat-input-element {
+  font-size: medium;
+  font-weight: 200;
+}
+
+.example-section {
+  margin: 12px 0;
+}
+
+#fileInput {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.preview {
+  max-width: 80px;
+  vertical-align: middle;
+}
+

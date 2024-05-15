@@ -1,0 +1,669 @@
+<nav class="items-center min-[320px]:justify-between  flex-wrap bancgroud p-6 ">
+<div class=" lg:flex justify-between block min-[320px]:hidden">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <a routerLink="/accueil">
+      <img src="assets/img/logo.png" class=" h-12 w-12" alt="">
+    </a>
+  </div>
+  <div class="w-full  flex-grow md:flex space-x-4 lg:items-center lg:w-auto" >
+      <div class="group inline-block">
+        <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+          <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Accueil</span>
+          <span>
+            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+              transition duration-150 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+          <li routerLink="/apropos" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Profile global de l’ABREMA</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Organigramme de l’ABREMA </li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Fonctions réglementaires</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Système de Gestion de qualité</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Conseil d’Administration</li>
+        </ul>
+      </div>
+      <div class="group inline-block">
+        <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+          <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Les Médicaments</span>
+          <span>
+            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+              transition duration-150 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Enregistrement</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li routerLink="/medicament/homologue" routerLinkActive="active"  class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Homologues</li>
+              <li routerLink="/medicament/non-homologue" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Non Homologues</li>
+              <li routerLink="/medicament/essentiels" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Essentiels</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Import et Export</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’importation</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Liste des points d’entres</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes règlementaires</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Inspections</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+              <li routerLink="/medicament/etablissement" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Les Etablissements</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GMP</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GDP</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Vigilance et Publicité</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Notifications</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Rappel des Produits</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="group inline-block">
+        <button class="outline-none focus:outline-none flex items-center min-w-32" >
+          <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Les aliments</span>
+          <span>
+            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+              transition duration-150 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Enregistrement</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li routerLink="/alimentation/homologue" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Homologues</li>
+              <li routerLink="/alimentation/nonHomlogue" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Non Homologues</li>
+              <li routerLink="/alimentation/essantiels" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Essentiels</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Import et Export</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’importation</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Liste des points d’entres</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes règlementaires</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Inspections</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+              <li routerLink="/alimentation/etablissements" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Les Etablissements</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GMP</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GDP</li>
+            </ul>
+          </li>
+          <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+            <button
+              class="w-full text-left flex items-center outline-none focus:outline-none"
+            >
+              <span class="pr-1  flex-1 ">Vigilance et Publicité</span>
+              <span class="mr-auto">
+                <svg
+                  class="fill-current h-4 w-4
+                  transition duration-150 ease-in-out"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <ul  class="bancgroud  rounded-sm absolute top-0 right-0 transition duration-150 ease-in-out lg:origin-top-left origin-top">
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+              <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Notifications</li>
+            </ul>
+          </li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Rappel des Produits</li>
+        </ul>
+      </div>
+
+      <div class="group inline-block">
+        <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+          <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Services en ligne</span>
+          <span>
+            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+              transition duration-150 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Importation</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’inspection</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’AMM</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Effet indésirable </li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Essais cliniques</li>
+        </ul>
+      </div>
+      <div class="group inline-block">
+        <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+          <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Information et Publications</span>
+          <span>
+            <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+              transition duration-150 ease-in-out"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+              />
+            </svg>
+          </span>
+        </button>
+        <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes généraux</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Galerie Photos</li>
+          <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Blog</li>
+        </ul>
+      </div>
+  </div>
+  <div class="" style="float: right;">
+    <a routerLink="/inscription" routerLinkActive="active" (click)="showMenu()" class="inline-block text-sm bg-yellow-500 px-4 lg:mx-2 py-2 text-white hover:text-teal-700 hover:bg-white mt-4 lg:mt-0">Inscription</a>
+    <a  routerLink="/admin" routerLinkActive="active" class="inline-block text-sm px-4 py-2 mx-2   text-white bg-red-700 hover:border-transparent hover:text-teal-700 hover:bg-white mt-4 lg:mt-0" >Connexion</a>
+  </div>
+</div>
+
+<div class="flex-row items-center  md:hidden">
+  <div class=" flex justify-between">
+    <div class="">
+      <a routerLink="/accueil">
+        <img src="assets/img/logo.png" class=" h-12 w-12" alt="">
+      </a>
+    </div>
+
+    <div class="block md:hidden">
+      <button (click)="showMenu()" class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-700 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+
+  <div class=" flex-row space-y-4  justify-items-start mt-4 {{traitement}}">
+    <div class="group inline-block w-[100%]" >
+      <button class="outline-none focus:outline-none  flex items-center " >
+        <span class="pr-1 font-extralight md:text-xl flex-1 text-white">A propos</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+            transition duration-150 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+        <li routerLink="/apropos" routerLinkActive="active" class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Profile global de l’ABREMA</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Organigramme de l’ABREMA </li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Fonctions réglementaires</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Système de Gestion de qualité</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Conseil d’Administration</li>
+      </ul>
+    </div>
+
+    <div class="group inline-block w-[100%]">
+      <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+        <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Les Médicaments</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+            transition duration-150 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Enregistrement</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Homologues</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Non Homologues</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Médicaments Essentiels</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Import et Export</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’importation</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Liste des points d’entres</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes règlementaires</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Inspections</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Les Etablissements</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GMP</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GDP</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Vigilance et Publicité</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Notifications</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Rappel des Produits</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group inline-block w-[100%]">
+      <button class="outline-none focus:outline-none  flex items-center" >
+        <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Les aliments</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+            transition duration-150 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Enregistrement</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Homologues</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Non Homologues</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Aliments Essentiels</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Import et Export</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’importation</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Liste des points d’entres</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes règlementaires</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Inspections</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Les Etablissements</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GMP</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Inspection GDP</li>
+          </ul>
+        </li>
+        <li class="rounded-sm relative px-3 py-4 bancgroudred text-white md:text-lg font-extralight">
+          <button
+            class="w-full text-left flex items-center outline-none focus:outline-none"
+          >
+            <span class="pr-1  flex-1 ">Vigilance et Publicité</span>
+            <span class="mr-auto">
+              <svg
+                class="fill-current h-4 w-4
+                transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul  class="bancgroud rounded-sm transform absolute transition duration-150 ease-in-out origin-bottom left-[-100%]">
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Notifications</li>
+            <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Rappel des Produits</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group inline-block w-[100%]">
+      <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+        <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Services en ligne</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+            transition duration-150 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Importation</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’inspection </li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Demande d’AMM</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Effet indésirable </li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Essais cliniques</li>
+      </ul>
+    </div>
+
+    <div class="group inline-block w-[100%]">
+      <button class="outline-none focus:outline-none  flex items-center min-w-32" >
+        <span class="pr-1 font-extralight md:text-xl flex-1 text-white">Information et Publications</span>
+        <span>
+          <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+            transition duration-150 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+            />
+          </svg>
+        </span>
+      </button>
+      <ul class="bancgroud  transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32 z-50" >
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes généraux</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Textes réglementaires </li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Galerie Photos</li>
+        <li class="rounded-sm px-3 py-4 bancgroudred text-white md:text-lg font-extralight">Blog</li>
+      </ul>
+    </div>
+
+    <div class="block md:hidden">
+      <a routerLink="/inscription" routerLinkActive="active" (click)="showMenu()" class="inline-block text-sm bg-yellow-500 px-4 lg:mx-2 py-2 text-white hover:text-teal-700 hover:bg-white mt-4 lg:mt-0">Inscription</a>
+      <a  routerLink="/admin" routerLinkActive="active" class="inline-block text-sm px-4 py-2 mx-2   text-white bg-red-700 hover:border-transparent hover:text-teal-700 hover:bg-white mt-4 lg:mt-0" >Connexion</a>
+    </div>
+
+  </div>
+</div>
+</nav>
+
+<style>
+  /* since nested groupes are not supported we have to use
+     regular css for the nested dropdowns
+  */
+  li>ul                 { transform: translatex(100%) scale(0) }
+  li:hover>ul           { transform: translatex(101%) scale(1) }
+  li > button svg       { transform: rotate(-90deg) }
+  li:hover > button svg { transform: rotate(-270deg) }
+
+  .group:hover .group-hover\:scale-100 { transform: scale(1) }
+  .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+  .scale-0 { transform: scale(0) }
+  .min-w-32 { min-width: 8rem }
+</style>
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!-- component -->
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+	<div class="relative py-3 sm:max-w-xl sm:mx-auto">
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-teal-600 to-rose-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+		</div>
+		<div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+			<div class="max-w-md mx-auto">
+				<div>
+					<h1 class="text-2xl font-semibold">Connetez-vous sur votre compte </h1>
+				</div>
+        <div *ngIf="errors?.error" class=" bg-rose-500 px-8 py-3 text-white font-extralight">
+          {{ errors?.error }}
+      </div>
+				<div class="divide-y divide-gray-200">
+					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+						<div class="relative">
+							<form class="example-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Adresse E-mail</mat-label>
+                  <input type="email" matInput formControlName="email"
+                         placeholder="Ex. pat@example.com">
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Mode de passe</mat-label>
+                  <input type="password" matInput formControlName="password">
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+                <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+                <div class="relative my-4">
+                  <button mat-raised-button color="warn">Connexion</button>
+                  <!-- <a routerLink="/inscription" mat-raised-button color="primary" style="margin-left: 2%;">Inscription</a> -->
+                  <a routerLink="/accueil" mat-raised-button color="accent" style="margin-left: 2%;">Page d'Accueil</a>
+                </div>
+              </form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

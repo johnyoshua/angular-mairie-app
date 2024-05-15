@@ -1,0 +1,74 @@
+<app-menu-top></app-menu-top>
+<div class="ml-auto mb-6">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+  <mat-card class=" mx-8 my-8">
+    <mat-card class="my-4">
+      <div class=" flex justify-between">
+        <mat-card-title>Liste des paiement des contribuables</mat-card-title>
+        <a routerLink="/paiements/add" mat-raised-button class=" bg-blue-900 text-white">Nouveau</a>
+      </div>
+    </mat-card>
+    <mat-form-field appearance="standard" class="px-2">
+      <mat-label>Recherche</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex.John Yoshua  " #input>
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class = "mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Contribuable </th>
+        <td mat-cell *matCellDef="let element" style="width: 20%;"> {{element.denomination}}</td>
+      </ng-container>
+      <ng-container matColumnDef="matricule">
+        <th mat-header-cell *matHeaderCellDef> Matricule </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;">{{element.indication}}{{element.matricule}}</td>
+      </ng-container>
+      <ng-container matColumnDef="num_paiement">
+        <th mat-header-cell *matHeaderCellDef> Num paiement </th>
+        <td mat-cell *matCellDef="let element" style="width: 20%;"> {{element.num_paiement}}</td>
+      </ng-container>
+      <ng-container matColumnDef="adresse">
+        <th mat-header-cell *matHeaderCellDef> Taxe </th>
+        <td mat-cell *matCellDef="let element" style="width: 20%;"> {{element.libelle}}</td>
+      </ng-container>
+      <ng-container matColumnDef="montant">
+        <th mat-header-cell *matHeaderCellDef> Montant </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;"> {{element.montant | number}}</td>
+      </ng-container>
+      <ng-container matColumnDef="impression">
+        <th mat-header-cell *matHeaderCellDef> Impression </th>
+        <td mat-cell *matCellDef="let element" style="width: 10%;"> 
+          <button   mat-raised-button class=" bg-blue-600 text-white" (click)="printIncoive(element.id)" style="margin-right: 1%;">
+            Impression
+          </button>
+        </td>
+      </ng-container>
+      <!-- <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element" style="width: 20%;">
+          <button   mat-raised-button class=" bg-teal-800 text-white" (click)="Edit(element.id)" style="margin-right: 1%;">
+            Modifier
+          </button>
+        </td>
+      </ng-container> -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[100,200,300,500]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </mat-card>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
